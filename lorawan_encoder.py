@@ -48,10 +48,10 @@ def xor_bytes(a, b):
     return bytes(x ^ y for x, y in zip(a, b))
 
 # Example usage
-dev_eui = '0011223344556677'
-app_eui = '1122334455667788'
-app_key = '2B7E151628AED2A6ABF7158809CF4F3C'
-payload = b'Hello, LoRaWAN!'
+dev_eui = '490634642e46d734'
+app_eui = '0000000000000000'
+app_key = 'f8582a4db9644666ecf1130ef0fefc68'
+payload = b'helloworld'
 
 lorawan_packet = encode_lorawan_packet(dev_eui, app_eui, app_key, payload)
 print('Encoded LoRaWAN packet:', base64.b16encode(lorawan_packet).decode('utf-8'))
